@@ -28,4 +28,6 @@ button {
   margin: 20px;
   display: flex;
   justify-content: center;
+  background-color: #c6bbbb;
+  border-radius: 5px;
 }

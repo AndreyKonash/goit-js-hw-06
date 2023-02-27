@@ -23,19 +23,13 @@ const images = [
 
 const gallery = document.querySelector("ul");
 
-const elements = images.map((option) => {
-  const itemGalery = document.createElement("li");
-  itemGalery.classList.add("list");
+const elements = images
+  .map(
+    (option) =>
+      `<li class="list"><img src="${option.url}" alt="${option.alt}" width = "350"></li>`
+  )
+  .join("");
 
-  const imageEl = document.createElement("img");
-  imageEl.src = option.url;
-  imageEl.alt = option.alt;
-  imageEl.width = 320;
+gallery.insertAdjacentHTML("beforeend", elements);
 
-  itemGalery.append(imageEl);
-  gallery.append(itemGalery);
-
-  return imageEl;
-});
-
-console.log(elements);
+// console.log(elements);
